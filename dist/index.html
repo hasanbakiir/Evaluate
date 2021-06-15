@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Evaluate a news article or text with Aylient Natural Language Processing</title>
+        <link rel="stylesheet" href="/styles/resets.css">
+        <link rel="stylesheet" href="/styles/base.css">
+        <link rel="stylesheet" href="/styles/header.css">
+        <link rel="stylesheet" href="/styles/form.css">
+        <link rel="stylesheet" href="/styles/footer.css">
+    <link href="main.css" rel="stylesheet"></head>
+
+    <body>
+
+        <header>
+            <div class="">
+                Udacity Project
+            </div>
+            <div class="">
+                Evaluate a News Article with Natural Language Processing
+            </div>
+            <div class="">
+                Please Enter A Valid Article URL
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <form class="" onsubmit="return handleSubmition(event)">
+                    <input id="name" type="text" name="input" value="" >
+                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmition(event)" 
+                        onsubmit="return Client.handleSubmition(event)">
+                </form>
+            </section>
+
+            <section id="resultSection" class="hidden" >
+                <strong>Results:</strong>
+                <div id="score_tag"></div>
+                <div id="agreement"></div>
+                <div id="subjectivity"></div>
+                <div id="confidence"></div>
+            </section>
+
+        </main>
+
+        <footer class="page_footer">
+            <p>This is a Footer</p>
+        </footer>
+
+       <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script> 
+
+    <script type="text/javascript" src="main.js"></script></body>
+</html>
